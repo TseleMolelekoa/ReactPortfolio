@@ -1,0 +1,82 @@
+/* about.css */
+/* Base styles */
+#About {
+  background-color: rgb(6,  83,  94);
+  width:  98vw;
+  border-radius:  70px;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius:  60px;
+  text-align: center;
+  justify-content: center;
+}
+
+.about-heading {
+  color: beige;
+}
+
+.content-container {
+  display: flex;
+  gap:  10px;
+  flex-direction: row;
+  content: normal;
+}
+
+.image img {
+  max-width:  100%;
+  height: auto; /* Adjust height to maintain aspect ratio */
+  box-shadow:  40px  5px  0px rgba(15,  13,  13,  0.1); /* Add shadow effect */
+}
+
+.circle {
+  position: absolute;
+  width:  830px;
+  height:  830px;
+  left:  521.59px;
+  top:  76.85px;
+  background: radial-gradient(46.81%  47.17% at  50%  50%, rgba(211,  226,  233,  0.504)  0%, rgba(56,  126,  158,  0)  100%);
+  mix-blend-mode: lighten;
+  opacity:  0.74;
+}
+
+.triangle {
+  position: absolute;
+  width:  0;
+  height:  100px;
+  border-left:  230px solid transparent;
+  border-right:  230px solid transparent;
+  border-bottom:  460px solid rgb(20,  67,  88);
+  margin:  0 auto;
+  top:  0;
+  left:  50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Media queries for responsiveness */
+@media (max-width:  768px) {
+  .about-me-container {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+  }
+
+  .image img {
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
+}
+
+@media (max-width:  480px) {
+  #bg-color {
+    border-radius:  30px; /* Adjust border-radius for smaller screens */
+  }
+
+  .circle {
+    width:  400px; /* Adjust size for smaller screens */
+    height:  400px;
+    left:  200px; /* Adjust position for smaller screens */
+    top:  30px;
+  }
+}

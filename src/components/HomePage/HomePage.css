@@ -1,0 +1,98 @@
+
+.homepage-container {
+  display: flex;
+  height: 100vh;
+  flex-grow: -1;
+  background-image: url('../assets/animated-man-computer-coding-nae6mec378lsg1i3.gif');
+  background-size: cover;
+  background-position: center;
+  /* flex-direction: row; Change flex direction to place sidebar on the left */
+}
+.heading{
+  text-align: center;
+}
+.sidebar {
+  width: 200px; /* Adjust as needed */
+  background-color: #f0f0f0;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* .button-container {
+  display:grid;
+  align-items: center;
+  justify-content:center;
+  height: 100%;
+} */
+
+.downloadcv-button,
+.contact-button {
+  margin: 10px;
+}
+
+.contact {
+  background-color: transparent;
+  color: hsl(175, 88%, 22%);
+  border: 2px solid #0bc5c5;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor:pointer;
+  position: relative;
+  
+}
+
+.contact:hover {
+  background-color: hsl(180, 79%, 35%);
+  color: white;
+}
+
+.download {
+  background-color: #162727;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 70vh;
+  margin-left: -55vh;
+}
+
+.download:hover {
+  background-color: hsl(204, 65%, 48%);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .button-container {
+    margin-top: -200px;
+  }
+
+  .downloadcv-button {
+    margin-right: 20px;
+  }
+
+  .social-icons a {
+    margin: 0 30px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-container {
+    margin-top: -150px;
+  }
+
+  .downloadcv-button {
+    margin-right: 10px;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 18px;
+  }
+}
