@@ -5,10 +5,15 @@
   width:  98vw;
   border-radius:  70px;
 }
+.about_me{
+ text-align: justify;
+ padding: 15px;
+ 
+}
 
 .about-me-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   border-radius:  60px;
   text-align: center;
@@ -17,19 +22,24 @@
 
 .about-heading {
   color: beige;
+  text-align: center;
 }
 
 .content-container {
   display: flex;
   gap:  10px;
-  flex-direction: row;
+  flex-direction: column;
   content: normal;
 }
 
 .image img {
   max-width:  100%;
-  height: auto; /* Adjust height to maintain aspect ratio */
+  text-align: center;
+  height: 50vh; 
   box-shadow:  40px  5px  0px rgba(15,  13,  13,  0.1); /* Add shadow effect */
+  margin-left: -85vh;
+  margin-right: 10vh;
+  float:right;
 }
 
 .circle {
@@ -57,6 +67,25 @@
   z-index: -1;
 }
 
+.footer {
+  text-align: center;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links li:last-child {
+  margin-right: 0;
+}
+
 /* Media queries for responsiveness */
 @media (max-width:  768px) {
   .about-me-container {
@@ -66,17 +95,28 @@
   .image img {
     height: auto; /* Adjust height to maintain aspect ratio */
   }
+
 }
 
 @media (max-width:  480px) {
-  #bg-color {
-    border-radius:  30px; /* Adjust border-radius for smaller screens */
+  #About {
+    border-radius:  20px; 
+    text-align: center;
+  }
+  .about_me{
+    text-align: center;
+    padding: 10px;
+  }
+  .image{
+    border-radius:  20px;
+    padding: 25px;
   }
 
   .circle {
-    width:  400px; /* Adjust size for smaller screens */
+    width:  400px; 
     height:  400px;
-    left:  200px; /* Adjust position for smaller screens */
+    left:  200px; 
     top:  30px;
+    align-items: center;
   }
 }
