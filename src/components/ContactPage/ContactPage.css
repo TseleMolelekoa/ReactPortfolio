@@ -1,0 +1,125 @@
+
+.Contact {
+    padding: 20px;
+    align-items: center;
+    background-color: rgb(142, 155, 158);
+    display: flex; /* Add display flex */
+    justify-content: center; /* Center align content horizontally */
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+    width: 97vw;
+    position: relative;
+    background: radial-gradient(46.81% 47.17% at 50% 50%, rgb(17, 80, 80) 0%, rgba(56, 126, 158, 0) 100%);
+    mix-blend-mode: lighten;
+    opacity: 0.74;
+    background-color: #3F4E62;
+    background-size: cover;
+    perspective: 1000px;
+    overflow: hidden; /* This ensures that the content doesn't overflow the viewport */
+    border-radius: 50px;
+}
+
+  
+  .contact-form {
+    max-width: 100%; /* Adjusted to 100% to make it responsive */
+    background-color: rgb(38, 86, 100);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display:block;
+    margin-bottom: 5px;
+    align-content: center;
+    font-size: 26px;
+  }
+  
+  input[type="text"],
+  input[type="email"],input[type="tel"]{
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 70px;
+
+  }
+  textarea {
+    width: 90%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 70px;
+    display: fixed;
+  }
+  
+  button[type="submit"] {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    align-content:center;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .image-container {
+    margin-left: 20px; /* Adjust this value to control the space between the form and the image */
+  }
+  
+  .image-container img {
+    max-width: 100%; /* Ensure the image does not exceed its container width */
+  }
+  .form-container {
+    display: flex;
+    align-items: center; /* Vertically center the form and image */
+  }
+  
+  .form-container form {
+    flex: 1; /* Allow the form to take up remaining space */
+  }
+  .heading {
+    align-items: center;
+    align-content: center;
+  }
+  /* contactPage.css */
+
+/* Style for form labels */
+.label {
+  display: block; /* Display labels as blocks for better spacing */
+  margin-bottom: 5px; /* Add some space between labels and inputs */
+  font-weight: bold; /* Make labels bold */
+}
+.footer {
+  text-align: center; /* Align icons to the center */
+}
+
+.social-links {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  display: flex; /* Use flexbox to place icons horizontally */
+  justify-content: center; /* Center items horizontally */
+}
+
+.social-links li {
+  margin-right: 10px; /* Add some space between icons */
+}
+
+.social-links a {
+  font-size: 34px; /* Adjust the font size of icons */
+}
+.social-links li:last-child {
+  margin-right: 0; /* Remove margin for the last icon */
+}
+.footer .copyright {
+  margin-top: 10px; /* Add some space between the social links and the copyright notice */
+  font-size: 14px; /* Adjust font size as needed */
+  color: #0e0d0d; /* Change color to match your design */
+  font-style: oblique;
+  font-weight: bolder;
+}
