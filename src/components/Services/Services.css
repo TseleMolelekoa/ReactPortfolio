@@ -65,7 +65,19 @@
     }
 }
 
+/* Default size for desktop */
+.footer-icon {
+    width: 30px;
+    height: 30px;
+}
 
+/* Smartphone sizes */
+@media (max-width: 768px) {
+    .footer-icon {
+        width: 30px;
+        height: 50px;
+    }
+}
 /* Media query for big screens */
 @media (min-width: 1824px) {
     /* Add styles specific to big screens */

@@ -46,22 +46,30 @@ const Services = () => {
       <div className="app">
         <h1 className='heading'>Services</h1>
         <div className="flip-card-container">
-          <ServicesContent />
-          <SkillsCard />
-          <EducationCard />
-          <ExperienceCard />
+          <ServicesContent/>
+          <SkillsCard/>
+          <EducationCard/>
+          <ExperienceCard/>
         </div>
         <footer className="footer">
-        <ul className="social-links">
-          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src={ linkedIn } /></a></li>
-          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><img src={Git} /></a></li>
-          <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer"><img src={Discord} /></a></li>
-          <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer"><img src={GMail}/></a></li>
-        </ul>
-        <p className="copyright">
-          &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
-        </p>
-      </footer>
+          <ul className="social-links">
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src={linkedIn}
+                                                                                                   className="footer-icon"/></a>
+            </li>
+            <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><img src={Git}
+                                                                                             className="footer-icon"/></a>
+            </li>
+            <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer"><img src={Discord}
+                                                                                              className="footer-icon"/></a>
+            </li>
+            <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer"><img src={GMail}
+                                                                                                  className="footer-icon"/></a>
+            </li>
+          </ul>
+          <p className="copyright">
+            &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
+          </p>
+        </footer>
       </div>
     </div>
   );
@@ -69,22 +77,22 @@ const Services = () => {
 
 const SkillsCard = () => {
   return (
-    <div className="flip-card">
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
-          <h3>Skills</h3>
-          <img src={Settings} style={{ width: '150px', height: '150px' }} />
-        </div>
-        <div className="flip-card-back">
-          <div className="icon-row">
-            <img src={css} style={{ width: '80px', height: '70px' }} />
-            <img src={Html} style={{ width: '80px', height: '70px' }} />
-            <img src={Java} style={{ width: '80px', height: '70px' }} />
-            <img src={VSCode} style={{ width: '80px', height: '70px' }} />
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <h3>Skills</h3>
+            <img src={Settings} style={{width: '150px', height: '150px'}}/>
           </div>
-          <div className="icon-row">
-            <img src={python} style={{ width: '80px', height: '70px' }} />
-            <img src={NodeJS} style={{ width: '80px', height: '70px' }} />
+          <div className="flip-card-back">
+            <div className="icon-row">
+              <img src={css} style={{width: '80px', height: '70px'}}/>
+              <img src={Html} style={{width: '80px', height: '70px'}}/>
+              <img src={Java} style={{width: '80px', height: '70px'}}/>
+              <img src={VSCode} style={{width: '80px', height: '70px'}}/>
+            </div>
+            <div className="icon-row">
+              <img src={python} style={{width: '80px', height: '70px'}}/>
+              <img src={NodeJS} style={{ width: '80px', height: '70px' }} />
             <img src={Reacts} style={{ width: '80px', height: '70px' }} />
             <img src={JavaScript} style={{ width: '80px', height: '70px' }} />
           </div>
