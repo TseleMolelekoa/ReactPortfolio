@@ -9,7 +9,6 @@ import Git from "../assets/249191_social media_github_git_social_octocat_icon.pn
 import GMail from "../assets/1220340_gmail_google_mail_icon.png";
 import linkedIn from "../assets/249188_linked in_social network_social media_linkedin_social_icon.png";
 
-
 // Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAnPA0wJ18jdleLYsvck4_r3a9BVSyaXjo",
@@ -63,6 +62,18 @@ const ContactPage = () => {
     }
 
     try {
+      // Verify reCAPTCHA response with Google's servers
+      const response = await axios.post('https://www.google.com/recaptcha/api/siteverify', {
+        secret: '6LezUIMpAAAAAFyw0R1Si7omRJVnte-zZzm0w5yC', // Replace with your reCAPTCHA secret key
+        response: recaptchaValue,
+      });
+
+      // Check if the reCAPTCHA verification was successful
+      if (!response.data.success) {
+        alert("reCAPTCHA verification failed. Please try again.");
+        return;
+      }
+
       // Save form data to Firebase Real-time Database
       const database = getDatabase();
       const contactsRef = ref(database, 'contacts');
@@ -93,7 +104,7 @@ const ContactPage = () => {
       // Success message
       console.log("Email sent successfully!");
     } catch (error) {
-      console.error('Error saving data to Firebase or sending email:', error);
+      console.error('Error verifying reCAPTCHA or saving data to Firebase:', error);
     }
   };
 
@@ -104,50 +115,50 @@ const ContactPage = () => {
 
   // Render the component
   return (
-    <div id='contacts'>
-      <h3 className='heading'>Get In Touch</h3>
-      <div className="Contact">
-        <form id="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" value={name} onChange={handleInputChange}
-                   placeholder="Enter Your Full Name"/>
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" value={email} onChange={handleInputChange}
-                   placeholder="Enter Your E-mail"/>
-          </div>
-          <div className="form-group">
-            <label htmlFor="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" value={phonenumber} onChange={handleInputChange}
-                   placeholder="Enter Your Phone Number"/>
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" value={message} onChange={handleInputChange}
-                      placeholder="Your message"></textarea>
-          </div>
-          <button type="submit">Send</button>
-          <ReCAPTCHA
-              sitekey="6LdozYIpAAAAAPDqfHr95SBLFQgVRQrpA9Dtg9F5"
-              onChange={onChange}
-          />
-        </form>
-        <footer className="footer">
-          <ul className="social-links">
-            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src={linkedIn} className="footer-icon"/></a>
-            </li>
-            <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><img src={Git} className="footer-icon"/></a></li>
-            <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer"><img src={Discord} className="footer-icon"/></a></li>
-            <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer"><img src={GMail} className="footer-icon"/></a></li>
-          </ul>
-          <p className="copyright">
-            &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
-          </p>
-        </footer>
+      <div id='contacts'>
+        <h3 className='heading'>Get In Touch</h3>
+        <div className="Contact">
+          <form id="contact-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input type="text" id="name" name="name" value={name} onChange={handleInputChange}
+                     placeholder="Enter Your Full Name"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
+              <input type="email" id="email" name="email" value={email} onChange={handleInputChange}
+                     placeholder="Enter Your E-mail"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="phone">Phone:</label>
+              <input type="tel" id="phone" name="phone" value={phonenumber} onChange={handleInputChange}
+                     placeholder="Enter Your Phone Number"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message:</label>
+              <textarea id="message" name="message" value={message} onChange={handleInputChange}
+                        placeholder="Your message"></textarea>
+            </div>
+            <button type="submit">Send</button>
+            <ReCAPTCHA
+                sitekey="6LezUIMpAAAAAB959CAW9TBCenzOvWt88Wqtpdnh"
+                onChange={onChange}
+            />
+          </form>
+          <footer className="footer">
+            <ul className="social-links">
+              <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src={linkedIn} className="footer-icon"/></a>
+              </li>
+              <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><img src={Git} className="footer-icon"/></a></li>
+              <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer"><img src={Discord} className="footer-icon"/></a></li>
+              <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer"><img src={GMail} className="footer-icon"/></a></li>
+            </ul>
+            <p className="copyright">
+              &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
+            </p>
+          </footer>
+        </div>
       </div>
-    </div>
   );
 };
 

@@ -10,6 +10,30 @@
  padding: 15px;
  
 }
+.footer {
+  text-align: center; /* Align icons to the center */
+}
+
+/* Default size for desktop */
+.footer-icon {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer-icon {
+    width: 30px;
+    height: 50px;
+  }
+}
+
+.footer .copyright {
+  margin-top: 10px; /* Add some space between the social links and the copyright notice */
+  font-size: 14px; /* Adjust font size as needed */
+  color: #0e0d0d; /* Change color to match your design */
+  font-style: oblique;
+  font-weight: bolder;
+}
 
 .about-me-container {
   display: flex;
@@ -37,7 +61,7 @@
   text-align: center;
   height: 50vh; 
   box-shadow:  40px  5px  0px rgba(15,  13,  13,  0.1); /* Add shadow effect */
-  margin-left: -85vh;
+  margin-left: 85vh;
   margin-right: 10vh;
   float:right;
 }

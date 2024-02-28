@@ -17,34 +17,61 @@ const HomePage = () => {
 
   return (
     <div id='homepage-container' className='homepage-container'>
-      <Sidebar style={{ height: "58vh", backgroundColor: "transparent" }} >
-        <Menu>
-          <MenuItem
-            icon={<MenuOutlinedIcon />}
-            onClick={() => {
-              collapseSidebar();
-            }}
-            style={{ textAlign: "left" }}
-          >
-            <h2>Menu</h2>
-          </MenuItem>
-          <MenuItem icon={<HomeOutlinedIcon />}><a href="#HomePage">Home</a></MenuItem>
-          <MenuItem icon={<PeopleOutlinedIcon />}><a href="#About">About</a></MenuItem>
-          <MenuItem icon={<ReceiptOutlinedIcon />}><a href="#services">Services</a></MenuItem>
-          <MenuItem icon={<SettingsApplicationsRoundedIcon />}><a href="#projects">Projects</a></MenuItem>
-          <MenuItem icon={<ContactsOutlinedIcon />}><a href="#contacts">Contacts</a></MenuItem>
-        </Menu>
-      </Sidebar>
-      <Circle />
-      <button className="download">
-        <a href='../assets/TseleMolelekoa.pdf'>
+        <Sidebar className="fixed-sidebar" style={{ height: "58vh", backgroundColor: "transparent" }}>
+            <Menu>
+                <MenuItem
+                    icon={<MenuOutlinedIcon />}
+                    onClick={() => {
+                        collapseSidebar();
+                    }}
+                    style={{ textAlign: "left" }}
+                >
+                    <h2>Menu</h2>
+                </MenuItem>
+                <MenuItem>
+                    <a href="#HomePage" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <HomeOutlinedIcon />
+                        Home
+                    </a>
+                </MenuItem>
+                <MenuItem>
+                    <a href="#About" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <PeopleOutlinedIcon />
+                        About
+                    </a>
+                </MenuItem>
+                <MenuItem>
+                    <a href="#services" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <ReceiptOutlinedIcon />
+                        Services
+                    </a>
+                </MenuItem>
+                <MenuItem>
+                    <a href="#projects" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <SettingsApplicationsRoundedIcon />
+                        Projects
+                    </a>
+                </MenuItem>
+                <MenuItem>
+                    <a href="#contacts" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <ContactsOutlinedIcon />
+                        Contacts
+                    </a>
+                </MenuItem>
+            </Menu>
+        </Sidebar>
+
+
+        <Circle />
+        <div className="homepage-btns">
+        <a href='https://drive.google.com/file/d/1_Iav6OxpVtFilgujNDeOTT4cczG32Wme/view?usp=sharing' className="download">
         <img src={Download} alt='download'/></a>
-      </button>
-      <button className="contact">
-        <a href="#contacts">
+
+
+        <a href="#contacts" className="contact-btn">
           <img src={ContactIcon} alt="Contact Icon" />
         </a>
-      </button>
+    </div>
     </div>
   );
 };
