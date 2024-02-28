@@ -130,7 +130,7 @@ const ContactPage = () => {
           </div>
           <button type="submit">Send</button>
           <ReCAPTCHA
-              sitekey="6LfWEnwpAAAAAKAo_8lVnuzgduZXdSFvxDFGuK7u"
+              sitekey="6LdozYIpAAAAAPDqfHr95SBLFQgVRQrpA9Dtg9F5"
               onChange={onChange}
           />
         </form>
