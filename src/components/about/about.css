@@ -1,47 +1,20 @@
-/* about.css */
 /* Base styles */
 #About {
-  background-color: rgb(6,  83,  94);
-  width:  98vw;
-  border-radius:  70px;
-}
-.about_me{
- text-align: justify;
- padding: 15px;
- 
-}
-.footer {
-  text-align: center; /* Align icons to the center */
+  background-color: rgb(6, 83, 94);
+  border-radius: 15vh;
+  text-align: center;
+  padding: 20px; /* Add padding to adjust content within the container */
 }
 
-/* Default size for desktop */
-.footer-icon {
-  width: 30px;
-  height: 30px;
-}
-
-@media (max-width: 768px) {
-  .footer-icon {
-    width: 30px;
-    height: 50px;
-  }
-}
-
-.footer .copyright {
-  margin-top: 10px; /* Add some space between the social links and the copyright notice */
-  font-size: 14px; /* Adjust font size as needed */
-  color: #0e0d0d; /* Change color to match your design */
-  font-style: oblique;
-  font-weight: bolder;
+.about_me {
+  text-align: justify;
 }
 
 .about-me-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius:  60px;
-  text-align: center;
-  justify-content: center;
+  flex-direction: row-reverse; /* Image on the right, text on the left */
+  text-align: start;
+  padding: 20px; /* Add padding to adjust content within the container */
 }
 
 .about-heading {
@@ -49,50 +22,30 @@
   text-align: center;
 }
 
-.content-container {
+.container {
   display: flex;
-  gap:  10px;
   flex-direction: column;
-  content: normal;
+  text-align: justify;
+  margin: 0;
 }
 
 .image img {
-  max-width:  100%;
-  text-align: center;
-  height: 50vh; 
-  box-shadow:  40px  5px  0px rgba(15,  13,  13,  0.1); /* Add shadow effect */
-  margin-left: 85vh;
-  margin-right: 10vh;
-  float:right;
+  height: 60vh;
+  max-width: 60%; /* Ensure the image fits within its container */
+  border-radius: 70px;
+  margin-left: 10vh;
 }
-
-.circle {
-  position: absolute;
-  width:  830px;
-  height:  830px;
-  left:  521.59px;
-  top:  76.85px;
-  background: radial-gradient(46.81%  47.17% at  50%  50%, rgba(211,  226,  233,  0.504)  0%, rgba(56,  126,  158,  0)  100%);
-  mix-blend-mode: lighten;
-  opacity:  0.74;
-}
-
-.triangle {
-  position: absolute;
-  width:  0;
-  height:  100px;
-  border-left:  230px solid transparent;
-  border-right:  230px solid transparent;
-  border-bottom:  460px solid rgb(20,  67,  88);
-  margin:  0 auto;
-  top:  0;
-  left:  50%;
-  transform: translateX(-50%);
-  z-index: -1;
-}
-
 .footer {
   text-align: center;
+  padding: 20px; /* Add padding to adjust content within the container */
+}
+
+.footer .copyright {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #0e0d0d;
+  font-style: oblique;
+  font-weight: bolder;
 }
 
 .social-links {
@@ -111,36 +64,17 @@
 }
 
 /* Media queries for responsiveness */
-@media (max-width:  768px) {
-  .about-me-container {
-    flex-direction: column; /* Stack content vertically on smaller screens */
-  }
-
-  .image img {
-    height: auto; /* Adjust height to maintain aspect ratio */
-  }
-
-}
-
-@media (max-width:  480px) {
+@media (max-width: 768px) {
   #About {
-    border-radius:  20px; 
+    border-radius: 15vh;
+  }
+  .about_me {
     text-align: center;
   }
-  .about_me{
-    text-align: center;
-    padding: 10px;
+  .about-me-container {
+    flex-direction: column;
   }
-  .image{
-    border-radius:  20px;
-    padding: 25px;
-  }
-
-  .circle {
-    width:  400px; 
-    height:  400px;
-    left:  200px; 
-    top:  30px;
-    align-items: center;
+  .image img {
+    height: auto;
   }
 }

@@ -1,59 +1,13 @@
 /* Base styles */
 #services {
-    background-color: rgb(15, 75, 94);
+    background-color: rgb(6, 83, 94);
     border-radius: 15vh;
-    padding: 20px; /* Adding padding for better spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow to the container */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .heading {
     text-align: center;
-}
-
-.flip-card-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.flip-card {
-    perspective: 1000px;
-    width: 300px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow to the cards */
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: translateY(-5px); /* Moving card slightly up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    padding: 20px; /* Adding padding for better spacing */
-    border: 1px solid transparent; /* Adding transparent border initially */
-}
-
-.flip-card-back {
-    transform: rotateY(180deg);
-    overflow: hidden; /* Ensure content doesn't overflow */
-    padding: 20px; /* Adding padding for better spacing */
-    font-size: 14px; /* Adjust font size as needed */
-    color: #fff; /* Setting text color */
 }
 
 .icon-row {
@@ -62,19 +16,16 @@
     padding: 10px;
 }
 
-/* Media query for tablets and smaller devices */
+/* Media queries */
 @media (max-width: 1224px) {
     .flip-card {
         width: 50%;
     }
 }
 
-/* Media query for desktop or laptop */
-@media (min-width: 1224px) {
-    /* Add styles specific to desktop or laptop */
-    .flip-card {
-        width: 300px;
-        height: 200px;
+@media (min-resolution: 2dppx) {
+    .icon {
+        font-size: 40px;
     }
 }
 
@@ -89,41 +40,5 @@
     .footer-icon {
         width: 30px;
         height: 50px;
-    }
-}
-
-/* Media query for big screens */
-@media (min-width: 1824px) {
-    /* Add styles specific to big screens */
-    .flip-card {
-        width: 350px;
-        height: 250px;
-        margin: 20px;
-    }
-
-    .flip-card-container {
-        justify-content: space-between;
-    }
-}
-
-/* Media query for portrait orientation */
-@media (orientation: portrait) {
-    /* Add styles specific to portrait orientation */
-    .flip-card {
-        width: 250px;
-        height: 180px;
-        margin: 15px;
-    }
-
-    .flip-card-container {
-        flex-direction: column;
-    }
-}
-
-/* Media query for retina displays */
-@media (min-resolution: 2dppx) {
-    /* Add styles specific to retina displays */
-    .icon {
-        font-size: 40px;
     }
 }

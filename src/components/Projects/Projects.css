@@ -1,316 +1,44 @@
-
 /* project.css */
 #projects {
     position: relative;
-    width: 100%;
-    height: 100%;
-    left: 671px;
-    top: -15px;
     opacity: 0.74;
-    border-radius: 30px;
-    margin-left: -670px;
-    margin-top: 50px;
 }
 
-
-.heading{
-    align-content: center;
+.heading {
     text-align: center;
-    font-family:Jaldi;
+    font-family: Jaldi;
     font-size: 38px;
 }
+
 .projects-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
-    width: 100vw;
-    position: relative;
-    background: radial-gradient(46.81% 47.17% at 50% 50%, rgb(17, 80, 80) 0%, rgba(56, 126, 158, 0) 100%);
+    background-color: rgb(6, 83, 94);
     mix-blend-mode: lighten;
     opacity: 0.74;
-    background-color: #3F4E62;
     background-size: cover;
-    perspective: 1000px;
     overflow: hidden; /* This ensures that the content doesn't overflow the viewport */
-    border-radius: 50px;
+    border-radius: 15vh;
+    padding: 20px;
 }
-
-    /* Component 1 */
-.component1 {
-    position: absolute;
-    background-size: cover;
-    width: 425px;
-    height: 776px;
-    left: 1038px;
-    top: 175px;
-}
-    /* layer small */
-.layer-small {
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 41.79%;
-    bottom: 0%;
-    background-size: cover;
-}
-    /* Rectangle 6 */
-.Rectangle_6 {
-    position: absolute;
-    background-size: cover;
-    left: 0.55%;
-    right: 40.6%;
-    top: 82.53%;
-    bottom: -14.76%;
-    background: linear-gradient(356.66deg, rgba(255, 124, 50, 0.1) 20.44%, rgba(203, 48, 104, 0.1) 132.66%);
-    border-radius: 17px;
-    transform: matrix(0.84, -0.54, 0.84, 0.54, 0, 0);
-}
-.Rectangle_5 {
-    background-size: cover;
-    position: absolute;
-    left: 0.55%;
-    right: 40.6%;
-    top: 77.87%;
-    bottom: -10.11%;
-    background: linear-gradient(356.66deg, rgba(75, 105, 125, 0.2) 20.44%, rgb(14, 51, 51) 132.66%);
-    border-radius: 17px;
-    transform: matrix(0.84, -0.54, 0.84, 0.54, 0, 0);
-}
-.Rectangle_4 {
-    background-size: cover;
-    position: absolute;
-    left: 0.55%;
-    right: 40.6%;
-    top: 68.57%;
-    bottom: -0.8%;
-    background: linear-gradient(356.66deg, rgba(119, 159, 176, 0.6) 20.44%, rgba(68, 94, 116, 0.6) 132.66%);
-    border-radius: 17px;
-    transform: matrix(0.84, -0.54, 0.84, 0.54, 0, 0);
-}
-.Rectangle_3 {
-    background-size: cover;
-    position: absolute;
-    left: 0.55%;
-    right: 40.6%;
-    top: 73.22%;
-    bottom: -5.45%;
-    background: linear-gradient(356.66deg, rgba(145, 184, 201, 0.4) 20.44%, rgba(66, 133, 244, 0.4) 132.66%);
-    border-radius: 17px;
-    transform: matrix(0.84, -0.54, 0.84, 0.54, 0, 0);
-}
-.Rectangle_2 {
-    background-size: cover;
-    position: relative;
-    left: 0%;
-    right: 40.5%;
-    top: 64.11%;
-    bottom: 3.3%;
-    background: linear-gradient(356.66deg, rgba(128, 128, 131, 0.8) 21.25%, rgba(91, 105, 143, 0.8) 132.25%);
-    border-radius: 17px;
-    transform: matrix(0.84, -0.54, 0.84, 0.54, 0, 0);
-}
-.shape1 {
-    /* Rectangle 1 */
-    background-size: cover;
-    position: absolute;
-    left: 0.55%;
-    right: 40.6%;
-    top: 59.27%;
-    bottom: 8.5%;
-    background: linear-gradient(356.66deg, #78A0B1 20.44%, #4A677B 132.66%);
-    mix-blend-mode: darken;
-    border-radius: 17px;
-    transform: matrix(0.84, -0.54, 0.84, 0.54, 0, 0);
-}
-.shape2 {
-    /* big */
-    background-size: cover;
-    position: absolute;
-    left: 0.55%;
-    right: 0.55%;
-    top: 0%;
-    bottom: 28.54%;
-}
-.shape3 {
-    /* Rectangle 7 */
-    background-size: cover;
-    position: absolute;
-    left: 0.55%;
-    right: 40.24%;
-    top: 53.62%;
-    bottom: 13.94%;
-    transform: matrix(0.84, -0.55, 0.84, 0.55, 0, 0);
-}
-.shape4 {
-    /* Rectangle 3 */
-    background-size: cover;
-    position: absolute;
-    left: 49.91%;
-    right: 9.36%;
-    top: 34.21%;
-    bottom: 41.6%;
-    background: linear-gradient(234.52deg, #A6E3E9 10.86%, #2D4059 103.94%);
-    transform: matrix(0.84, -0.54, 0, 1, 0, 0)
-}
-.shape5 {
-    /* Rectangle 2 */
-
-    position: absolute;
-    left: 15.67%;
-    right: 43.59%;
-    top: 22.11%;
-    bottom: 53.7%;
-    background-size: cover;
-    background: linear-gradient(266.58deg, #3F4E62 -20.62%, #566F80 26.79%, #A6E3E9 139.31%);
-    transform: matrix(0.84, 0.54, 0, 1, 0, 0);
-}
-.Rectangle1{
-    background-size: cover;
-    position: absolute;
-    left: 15.67%;
-    right: 43.59%;
-    top: 22.11%;
-    bottom: 55.57%;
-    background: linear-gradient(356.66deg, #0661AE 20.44%, #0661AE 132.66%);
-    mix-blend-mode: darken;
-    transform: matrix(0.84, -0.54, 0.84, 0.54, 0, 0);
-}
-
-.Rectangle8{
-    position: absolute;
-    left: 15.8%;
-    right: 43.46%;
-    top: 31.05%;
-    bottom: 46.64%;
-    background: linear-gradient(356.66deg, #FF7C32 20.44%, #CB3068 132.66%);
-    mix-blend-mode: screen;
-    opacity: 0.4;
-    transform: matrix(0.84, -0.54, 0.84, 0.54, 0, 0);
-
-}
-.Rectangle9 {
-    position: absolute;
-    left: 15.8%;
-    right: 43.46%;
-    top: 39.74%;
-    bottom: 37.95%;
-
-    background: linear-gradient(356.66deg, #374C63 20.44%, #335F6D 132.66%);
-    mix-blend-mode: screen;
-    opacity: 0.4;
-    transform: matrix(0.84, -0.54, 0.84, 0.54, 0, 0);
-}
-    /* Rectangle 4 */
-.Rectangle4{
-    position: absolute;
-    left: 0.55%;
-    right: 40.26%;
-    top: 17.83%;
-    bottom: 49.83%;
-    transform: matrix(0.84, -0.55, 0.84, 0.55, 0, 0);
-}
-    /* Rectangle 6 */
-.Rectangle6{
-    position: absolute;
-    left: 50.14%;
-    right: -9.19%;
-    top: 35.62%;
-    bottom: 28.54%;
-    transform: matrix(0.84, -0.55, 0, 1, 0, 0);
-
-}
-    /* Rectangle 5 */
-.shape15{
-    position: absolute;
-    left: 0.55%;
-    right: 40.73%;
-    top: 18.04%;
-    bottom: 46.41%;
-
-    border-radius: 3px;
-    transform: matrix(0.84, 0.55, 0, 1, 0, 0);
-}
-
-.background-shapes {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-}
-.cards-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-direction:row ; 
-    margin-top: 20px; 
-    margin-left: 200px;
-    gap:50px;
-}
-.footer {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
 .card {
     font-weight: bolder;
-    font-size: 45px;
+    font-size: 20px;
     width: 200px;
     height: 200px;
     background-color: hwb(184 23% 1%);
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px; 
+    margin: 10px;
     padding: 20px;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    font-size: 18px;
     color: #0c0a0a;
     cursor: pointer;
     transition: all 0.3s ease;
-    flex-direction: column;
-    display: flex;
 }
 
 .card:hover {
     transform: scale(1.1);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-.gif-container {
-    position: absolute;
-    top: 15px;
-    left: 50%; 
-    transform: translateX(-50%); 
-    z-index: -1; 
-}
-.button-container2 {
-    display:flex;
-    justify-content: center;
-    margin-top: 450px; 
-    position:absolute;
-    height:50px;
-    flex-direction:column;
-}
-
-.button-container2 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #0a3d46;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    flex-direction: row;
-}
-
-.button-container2 button:hover {
-    background-color: #45a049;
 }
 
 .github-button {
@@ -328,42 +56,19 @@
     background-color: #101110;
     color: rgb(41, 37, 37);
 }
+
 /* Media query for smartphones */
 @media only screen and (max-width: 600px) {
     .card {
-        width: 50%; /* Adjust width for smaller screens */
-        margin-left: -50px;
-        height: 10vh;
-        width: 50%;
-        flex-direction: column;
-    }
-    .h3{
-        font-family:'jaldi';
-        font-size: 12px;
+        width: 80%; /* Adjust width for smaller screens */
+        height: auto;
+        font-size: 16px;
     }
 }
-  
-  /* Media query for tablets */
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    #proect {
-      left: 50%;
-      margin-left: -50%;
-      border-radius: 20px;
-    }
-  
+
+/* Media query for tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
     .heading {
-      font-size: 32px;
+        font-size: 32px;
     }
-  
-    .projects-page {
-      border-radius: 20px;
-    }
-  
-    .component1 {
-      width: 70%;
-      height: auto;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
+}
