@@ -11,19 +11,19 @@ const AboutMe = () => {
   return (
       <div id='About'>
         <h2 className="about-heading">About Tsele Molelekoa<br/>A Junior Software-Developer</h2>
-        <div className="about-me-container">
-          <circle/>
-          <div className="content-container">
+        <div className="about-me-container row">
+          <div className="col-md-6 image">
+            <img src={profileImage} alt="Profile" />
+          </div>
+          <div className="col-md-6 content-container">
             <div className="text">
               <p className='about_me'>
                 Hi! I'm Tsele Molelekoa. I'm passionate about Software Development. This is a space where I'll share a
                 little bit about myself.
                 <span>I am a qualified IT enthusiast with experience in providing excellent customer <br/>support to network users as well as expertise in troubleshooting technical issues.</span>
                 <span> I have practical experience and competence in a variety of security, networking, and operating system software. <br/>I graduated with a Btech degree in Project Management at the Central University of Technology because I saw the growing need to broaden industry knowledge and skills relating to the management and execution of IT-related projects that any organization wishes to undertake. </span>
-              </p><Circle/>
-            </div>
-            <div className="image">
-              <img src={profileImage} alt="Profile"/>
+              </p>
+              <Circle/>
             </div>
           </div>
         </div>

@@ -13,11 +13,11 @@
     background: radial-gradient(46.81% 47.17% at 50% 50%, rgb(17, 80, 80) 0%, rgba(56, 126, 158, 0) 100%);
     mix-blend-mode: lighten;
     opacity: 0.74;
-    background-color: #3F4E62;
     background-size: cover;
     perspective: 1000px;
     overflow: hidden; /* This ensures that the content doesn't overflow the viewport */
     border-radius: 50px;
+    background-color: rgb(6,  83,  94);
 }
 
   
@@ -45,6 +45,9 @@
     border-radius: 70px;
 
   }
+.container {
+    margin: 0 auto;
+}
   textarea {
     width: 90%;
     padding: 30px;
