@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { initializeApp } from 'firebase/app';
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { getDatabase, push, ref } from 'firebase/database';
 import axios from 'axios'; // For form submission (if needed)
 import ReCAPTCHA from "react-google-recaptcha"; // For reCAPTCHA verification (optional)
@@ -49,7 +50,6 @@ const ContactPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     // Check if reCAPTCHA is verified
     if (!recaptchaValue) {
       alert("Please verify that you're not a robot.");
@@ -109,44 +109,55 @@ const ContactPage = () => {
   };
 
   return (
-      <div className="container mt-5 Contact">
+      <Container className="mt-5">
         <h3 className="heading text-center mb-4">Get In Touch</h3>
-        <form id="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group mb-3">
-            <label htmlFor="name" className="label">Name:</label>
-            <input type="text" id="name" name="name" value={name} onChange={handleInputChange} placeholder="Enter Your Full Name" className="form-control"/>
-          </div>
-          <div className="form-group mb-3">
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" value={email} onChange={handleInputChange} placeholder="Enter Your E-mail" className="form-control"/>
-          </div>
-          <div className="form-group mb-3">
-            <label htmlFor="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" value={phonenumber} onChange={handleInputChange} placeholder="Enter Your Phone Number" className="form-control"/>
-          </div>
-          <div className="form-group mb-3">
-            <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" value={message} onChange={handleInputChange} placeholder="Your message" className="form-control"></textarea>
-          </div>
+        <Row className="justify-content-center"> {/* Center the form horizontally */}
+          <Col sm={8} md={6}> {/* Adjust the column size as needed */}
+        <Form id="contact-form" onSubmit={handleSubmit}>
+          <Form.Group as={Row} controlId="formName" className="mb-3">
+            <Form.Label column sm={2}>Name:</Form.Label>
+            <Col sm={10}>
+              <Form.Control type="text" name="name" value={name} onChange={handleInputChange} placeholder="Enter Your Full Name" />
+            </Col>
+          </Form.Group>
+          <Form.Group as={Row} controlId="formEmail" className="mb-3">
+            <Form.Label column sm={2}>Email:</Form.Label>
+            <Col sm={10}>
+              <Form.Control type="email" name="email" value={email} onChange={handleInputChange} placeholder="Enter Your E-mail" />
+            </Col>
+          </Form.Group>
+          <Form.Group as={Row} controlId="formPhone" className="mb-3">
+            <Form.Label column sm={2}>Phone:</Form.Label>
+            <Col sm={10}>
+              <Form.Control type="tel" name="phone" value={phonenumber} onChange={handleInputChange} placeholder="Enter Your Phone Number" />
+            </Col>
+          </Form.Group>
+          <Form.Group as={Row} controlId="formMessage" className="mb-3">
+            <Form.Label column sm={2}>Message:</Form.Label>
+            <Col sm={10}>
+              <Form.Control as="textarea" name="message" value={message} onChange={handleInputChange} placeholder="Your message" />
+            </Col>
+          </Form.Group>
           <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={onChange} />
-          <button type="submit" className="btn btn-primary mt-3">Send</button>
-        </form>
-        <div>
-          {/* Social links section */}
-          <footer className="footer mt-auto">
-            {/* Footer with mt-auto for bottom placement */}
-            <ul className="social-links">
-              <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a></li>
-              <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
-            </ul>
-            <p className="copyright">
-              &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
-            </p>
-          </footer>
-        </div>
-      </div>
+          <Button variant="primary" type="submit" className="mt-3">Send</Button>
+          <div>
+            <footer className="footer mt-auto">
+              {/* Footer with mt-auto for bottom placement */}
+              <ul className="social-links">
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
+              </ul>
+              <p className="copyright">
+                &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
+              </p>
+            </footer>
+          </div>
+        </Form>
+          </Col>
+        </Row>
+      </Container>
   );
 };
 
