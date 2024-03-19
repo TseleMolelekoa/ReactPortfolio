@@ -8,7 +8,7 @@
 
 .heading {
     text-align: center;
-    font-family: Jaldi;
+    font-family: Jaldi, sans-serif;
     font-size: 38px;
 }
 
@@ -22,7 +22,7 @@
     background-size: cover;
     overflow: hidden; /* This ensures that the content doesn't overflow the viewport */
     border-radius: 5vh;
-    padding: 10px;
+    /*padding: 10px;*/
 
 }
 
