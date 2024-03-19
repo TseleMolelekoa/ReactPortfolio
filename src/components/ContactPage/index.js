@@ -48,6 +48,7 @@ const ContactPage = () => {
         break;
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Check if reCAPTCHA is verified
@@ -71,7 +72,7 @@ const ContactPage = () => {
 
       // Save form data to Firebase Real-time Database
       const database = getDatabase();
-      const contactsRef = ref(database, 'contacts');
+      const contactsRef = ref(database, '');
       const newContactRef = push(contactsRef, {
         name,
         email,
@@ -110,55 +111,62 @@ const ContactPage = () => {
   };
 
   return (
-      <Container className="mt-5">
-        <h3 className="heading text-center mb-4">Get In Touch</h3>
-        <Row className="justify-content-center"> {/* Center the form horizontally */}
-          <Col sm={8} md={6}> {/* Adjust the column size as needed */}
-        <Form id="contact-form" onSubmit={handleSubmit}>
-          <Form.Group as={Row} controlId="formName" className="mb-3">
-            <Form.Label column sm={2}>Name:</Form.Label>
-            <Col sm={10}>
-              <Form.Control type="text" name="name" value={name} onChange={handleInputChange} placeholder="Enter Your Full Name" />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} controlId="formEmail" className="mb-3">
-            <Form.Label column sm={2}>Email:</Form.Label>
-            <Col sm={10}>
-              <Form.Control type="email" name="email" value={email} onChange={handleInputChange} placeholder="Enter Your E-mail" />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} controlId="formPhone" className="mb-3">
-            <Form.Label column sm={2}>Phone:</Form.Label>
-            <Col sm={10}>
-              <Form.Control type="tel" name="phone" value={phonenumber} onChange={handleInputChange} placeholder="Enter Your Phone Number" />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} controlId="formMessage" className="mb-3">
-            <Form.Label column sm={2}>Message:</Form.Label>
-            <Col sm={10}>
-              <Form.Control as="textarea" name="message" type="message" value={message} onChange={handleInputChange} placeholder="Your message" />
-            </Col>
-          </Form.Group>
-          <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={onChange} />
-          <Button variant="primary" type="submit" className="mt-3">Send</Button>
-          <div>
-            <footer className="footer mt-auto">
-              {/* Footer with mt-auto for bottom placement */}
-              <ul className="social-links">
-                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a></li>
-                <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
-              </ul>
-              <p className="copyright">
-                &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
-              </p>
-            </footer>
+
+        <Container className='container'>
+          <div className="contact-form-box">
+          <h3 className="heading text-center mb-4">Get In Touch</h3>
+          <Row className="justify-content-center">
+            <Form id="contact-form" onSubmit={handleSubmit}>
+              <Form.Group as={Row} controlId="formName" className="mb-3">
+                <Col sm={10} md={8} lg={6} className="mx-auto">
+                  <Form.Control type="text" name="name" value={name} onChange={handleInputChange}
+                                placeholder="Enter Your Full Name"/>
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row} controlId="formEmail" className="mb-3">
+                <Col sm={10} md={8} lg={6} className="mx-auto">
+                  <Form.Control type="email" name="email" value={email} onChange={handleInputChange}
+                                placeholder="Enter Your E-mail"/>
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row} controlId="formPhone" className="mb-3">
+                <Col sm={10} md={8} lg={6} className="mx-auto">
+                  <Form.Control type="tel" name="phone" value={phonenumber} onChange={handleInputChange}
+                                placeholder="Enter Your Phone Number"/>
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row} controlId="formMessage" className="mb-3">
+                <Col sm={10} md={8} lg={6} className="mx-auto">
+                  <Form.Control as="textarea" name="message" type="message" value={message} onChange={handleInputChange}
+                                placeholder="Your message" style={{height: '150px', width: '350px'}}/>
+                </Col>
+              </Form.Group>
+              <Row className="justify-content-center mb-3">
+                <Col sm={10} md={8} lg={6} className="text-center">
+                  <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={onChange}/>
+                </Col>
+              </Row>
+              <Button variant="primary" type="submit" className="mt-3">Send</Button>
+              <div>
+                <footer className="footer mt-auto">
+                  {/* Footer with mt-auto for bottom placement */}
+                  <ul className="social-links">
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                    <li><a href="mailto:example@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
+                  </ul>
+                  <p className="copyright">
+                    &copy; {new Date().getFullYear()} Tsele Molelekoa. All rights reserved.
+                  </p>
+                </footer>
+              </div>
+            </Form>
+
+            {/* Footer */}
+          </Row>
           </div>
-        </Form>
-          </Col>
-        </Row>
-      </Container>
+        </Container>
   );
 };
 

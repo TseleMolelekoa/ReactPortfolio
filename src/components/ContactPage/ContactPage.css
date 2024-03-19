@@ -1,125 +1,102 @@
-
+/* HomePage.css */
+.contact-form-box{
+  box-shadow:15px 12px 12px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 5vh;
+  margin: 15px;
+}
 .Contact {
-    padding: 10px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height:100vh;
-    width: 97vw;
-    position: relative;
-    /*background: radial-gradient(46.81% 47.17% at 50% 50%, rgb(17, 80, 80) 0%, rgba(56, 126, 158, 0) 100%);*/
-    mix-blend-mode: lighten;
-    opacity: 0.74;
-    background-size: cover;
-    perspective: 1000px;
-    overflow: hidden;
-    border-radius: 50px;
-    background-color: rgb(6, 83, 94); /* Override the previous background color */
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height:100vh;
+  width: 97vw;
+  position: relative;
+  mix-blend-mode: lighten;
+  opacity: 0.74;
+  background-size: cover;
+  perspective: 1000px;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: rgb(6, 83, 94);
 }
 
-
-  .contact-form {
-    max-width: 100%; /* Adjusted to 100% to make it responsive */
-    background-color: rgb(38, 86, 100);
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-      background-color: rgb(6,  83,  94);
-  }
-  
-  label {
-    display:block;
-    margin-bottom: 5px;
-    align-content: center;
-    font-size: 26px;
-  }
-  
-  input[type="text"],
-  input[type="email"],input[type="tel"], input[type="message"] {
-    width: 90%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 70px;
-  }
-/*  }*/
-.container{
-    margin: 0 auto;
-    background-color: rgb(6, 83, 94); /* Override the previous background color */
+.contact-form {
+  max-width: 100%;
+  background-color: rgb(38, 86, 100);
 }
-  textarea {
-    width: 90%;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 70px;
-    display:flex;
-  }
-  
-  button[type="submit"] {
-    width: 70%;
-    padding: 10px;
-    border: none;
-    border-radius: 50px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    align-content:center;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  .image-container {
-    margin-left: 20px; /* Adjust this value to control the space between the form and the image */
-  }
-  
-  .image-container img {
-    max-width: 100%; /* Ensure the image does not exceed its container width */
-  }
-  .form-container {
-    display: flex;
-    align-items: center; /* Vertically center the form and image */
-  }
-  
-  .form-container form {
-    flex: 1; /* Allow the form to take up remaining space */
-  }
-  .heading {
-    align-items: center;
-    align-content: center;
-  }
-  /* contactPage.css */
 
-/* Style for form labels */
-.label {
-  display: block; /* Display labels as blocks for better spacing */
-  margin-bottom: 5px; /* Add some space between labels and inputs */
-  font-weight: bold; /* Make labels bold */
+.form-group {
+  margin-bottom: 20px;
+  background-color: rgb(6,  83,  94);
 }
+
+label {
+  display:block;
+  margin-bottom: 5px;
+  align-content: center;
+  font-size: 26px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="message"].textarea {
+  width: 60%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 70px;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: rgb(6, 83, 94);
+}
+
+button[type="submit"] {
+  width: 30%;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  align-content:center;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form-container form {
+  flex: 1;
+  box-shadow: 15px 12px 12px 15px rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+  align-items: center;
+  align-content: center;
+  margin: 15px;
+  padding-top: 10px;
+}
+
 .footer {
-  text-align: center; /* Align icons to the center */
+  text-align: center;
+  font-size: 14px;
+  color: #0e0d0d;
+  font-style: oblique;
+  font-weight: bolder;
 }
 
-/* Default size for desktop */
 .footer-icon {
   width: 30px;
   height: 30px;
 }
 
-/* Smartphone sizes */
 @media (max-width: 768px) {
   .footer-icon {
     width: 30px;
     height: 50px;
   }
-}
-
-.footer .copyright {
-  margin-top: 10px; /* Add some space between the social links and the copyright notice */
-  font-size: 14px; /* Adjust font size as needed */
-  color: #0e0d0d; /* Change color to match your design */
-  font-style: oblique;
-  font-weight: bolder;
 }

@@ -1,7 +1,9 @@
 /* project.css */
 #projects {
-    position: relative;
     opacity: 0.74;
+    box-shadow:15px 12px 12px 15px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 5vh;
 }
 
 .heading {
@@ -14,13 +16,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(6, 83, 94);
+    background-color: rgb(23, 53, 56);
     mix-blend-mode: lighten;
     opacity: 0.74;
     background-size: cover;
     overflow: hidden; /* This ensures that the content doesn't overflow the viewport */
     border-radius: 5vh;
     padding: 10px;
+
 }
 
 /* Adjusted card class using Bootstrap */

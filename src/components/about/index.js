@@ -8,7 +8,7 @@ import './about.css'; // Import your CSS file
 
 const AboutMe = () => {
   return (
-      <div id='About' className="container">
+      <div id='About' className="about-container">
         <h2 className="about-heading text-center mt-5">About Tsele Molelekoa<br/>A Junior Software-Developer</h2>
         <div className="about-me-container row">
           <div className="col-md-6 image">

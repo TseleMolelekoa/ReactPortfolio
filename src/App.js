@@ -22,13 +22,13 @@ const App = () => {
           <div className="loader"></div>
         </div>
       ) : (
-        <>
+        <div>
           <HomePage />
           <About />
           <Services />
           <Projects />
           <ContactPage />
-        </>
+        </div>
       )}
     </div>
   );
