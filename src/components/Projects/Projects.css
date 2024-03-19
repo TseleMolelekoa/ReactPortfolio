@@ -19,9 +19,11 @@
     opacity: 0.74;
     background-size: cover;
     overflow: hidden; /* This ensures that the content doesn't overflow the viewport */
-    border-radius: 15vh;
-    padding: 20px;
+    border-radius: 5vh;
+    padding: 10px;
 }
+
+/* Adjusted card class using Bootstrap */
 .card {
     font-weight: bolder;
     font-size: 20px;

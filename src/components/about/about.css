@@ -1,9 +1,11 @@
 /* Base styles */
 #About {
   background-color: rgb(6, 83, 94);
-  border-radius: 15vh;
+  border-radius: 5vh;
   text-align: center;
-  padding: 20px; /* Add padding to adjust content within the container */
+  padding-right: 10px; /* Add padding to adjust content within the container */
+  margin-bottom: 50px;
+
 }
 
 .about_me {
@@ -13,8 +15,8 @@
 .about-me-container {
   display: flex;
   flex-direction: row-reverse; /* Image on the right, text on the left */
-  text-align: start;
-  padding: 20px; /* Add padding to adjust content within the container */
+  text-align:justify;
+  /*padding: 10px; !* Add padding to adjust content within the container *!*/
 }
 
 .about-heading {
@@ -23,9 +25,10 @@
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  text-align: justify;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  padding: 20px;
+  text-align: center;
   margin: 0;
 }
 
@@ -66,10 +69,10 @@
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   #About {
-    border-radius: 15vh;
+    border-radius: 5vh;
   }
   .about_me {
-    text-align: center;
+    text-align: justify;
   }
   .about-me-container {
     flex-direction: column;

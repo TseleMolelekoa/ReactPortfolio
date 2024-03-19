@@ -1,11 +1,11 @@
+/* Existing CSS */
 #homepage-container {
-  display: flex;
-  height:  100vh;
-  flex-grow: 1;
-  background-image: url('../assets/animated-man-computer-coding-nae6mec378lsg1i3.gif');
-  background-size: cover;
-  background-position: center;
-  border-radius:  20px;
+  top:0;
+  margin: 0;
+  background-image: url('/src/components/assets/animated-man-computer-coding-nae6mec378lsg1i3.gif');
+  background-size: cover; /* Make the background image responsive */
+  /*background-attachment: fixed;*/
+  border-radius: 5vh;
 }
 
 .fixed-sidebar {
@@ -15,69 +15,51 @@
   height: 100%;
   width: 200px; /* Adjust the width as needed */
   overflow-y: auto; /* Enable scrolling within the sidebar */
-  background-color: #136a13; /* Adjust the background color as needed */
-  color:#0f4b5e;
-  padding: 20px;
-}
-
-
-.content {
-  flex:  1;
-  padding:  20px;
+  color: #0f4b5e;
 }
 .homepage-btns {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100vh;
+  justify-content: space-around; /* or any other spacing you prefer */
+  margin-bottom: 10vh;
   align-items: center; /* Center buttons horizontally */
+  /* Push content to the bottom */
 }
 
-.contact-btn {
-  display: block;
-  text-decoration: none;
-  padding: 10px 20px;
+.btn-contact,
+.btn-download {
+  padding: 20px 20px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 20px; /* Adjust as needed */
+  margin-bottom: 25px; /* Adjust as needed */
+  width: 100%; /* Set width to 100% for responsiveness */
+  max-width: 200px; /* Limit maximum width for larger screens */
 }
 
-.contact-btn:hover {
+.btn-contact:hover,
+.btn-download:hover {
   background-color: hsl(180, 79%, 35%);
   color: hsl(180, 79%, 35%);
 }
 
-.download {
-  padding: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 50px; /* Adjust as needed */
-}
-
-.download:hover {
-  background-color: hsl(204, 65%, 48%);
-}
-
-
 .loader-wrapper {
-  width:  100%;
-  height:  100%;
+  width: 100%;
+  height: 100%;
   position: fixed;
-  top:  0;
-  left:  0;
+  top: 0;
+  left: 0;
   background-color: #0b0b0b;
   display: grid;
   place-items: center;
 }
 
 .loader {
-  border:  16px solid #e3e3e3;
-  border-top:  16px solid #3498db;
-  border-radius:  50%;
-  width:  140px;
-  height:  140px;
-  animation: spin  1s linear infinite;
+  border: 16px solid #e3e3e3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -90,59 +72,41 @@
   }
 }
 
-/* Existing CSS */
-
-/* Adjustments for responsiveness */
-@media (max-width:  768px) {
+/* Bootstrap CSS for responsiveness */
+@media (max-width: 768px) {
   .homepage-container {
     background-size: cover;
+    border-radius: 0;
   }
 
   .homepage-btns {
-    flex-direction: column;
     align-items: center;
-
-    .sidebar {
-      width: 100px;
-    }
-
-    .content {
-      padding: 15px;
-    }
-
-
-    .contact,
-    .download {
-
-    }
-
-    .loader {
-      width: 80px;
-      height: 80px;
-    }
   }
 
-  @media (max-width: 480px) {
-    .sidebar {
-      display: none;
-    }
+  .fixed-sidebar {
+    width: 100%; /* Set width to 100% for responsiveness */
+    max-width: 200px; /* Limit maximum width for larger screens */
+    border-radius: 5vh;
+  }
+  .btn-contact,
+  .btn-download {
+    width: 100%; /* Set width to 100% for responsiveness */
+    max-width: 150px; /* Limit maximum width for larger screens */
+  }
 
+  .loader {
+    width: 80px;
+    height: 80px;
+  }
+}
 
-    .contact {
-      width: 50%;
-      align-items: center;
-      justify-content: center;
-      margin-left: 20vh;
-      margin-top: 70vh;
-    }
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
 
-    .download {
-      width: 50%;
-      align-items: center;
-      justify-content: center;
-      margin-left: 20vh;
-      /* margin-top: 50vh; */
-      margin-top: 250px;
-    }
+  .btn-contact,
+  .btn-download {
+    margin-top: 10px; /* Adjust margin-top for smaller screens */
   }
 }

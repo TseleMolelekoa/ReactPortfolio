@@ -1,26 +1,24 @@
 
 .Contact {
-    padding: 20px;
+    padding: 10px;
     align-items: center;
-    background-color: rgb(142, 155, 158);
-    display: flex; /* Add display flex */
-    justify-content: center; /* Center align content horizontally */
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
     height:100vh;
     width: 97vw;
     position: relative;
-    background: radial-gradient(46.81% 47.17% at 50% 50%, rgb(17, 80, 80) 0%, rgba(56, 126, 158, 0) 100%);
+    /*background: radial-gradient(46.81% 47.17% at 50% 50%, rgb(17, 80, 80) 0%, rgba(56, 126, 158, 0) 100%);*/
     mix-blend-mode: lighten;
     opacity: 0.74;
     background-size: cover;
     perspective: 1000px;
-    overflow: hidden; /* This ensures that the content doesn't overflow the viewport */
+    overflow: hidden;
     border-radius: 50px;
-    background-color: rgb(6,  83,  94);
+    background-color: rgb(6, 83, 94); /* Override the previous background color */
 }
 
-  
+
   .contact-form {
     max-width: 100%; /* Adjusted to 100% to make it responsive */
     background-color: rgb(38, 86, 100);
@@ -28,6 +26,7 @@
   
   .form-group {
     margin-bottom: 20px;
+      background-color: rgb(6,  83,  94);
   }
   
   label {
@@ -38,15 +37,16 @@
   }
   
   input[type="text"],
-  input[type="email"],input[type="tel"]{
+  input[type="email"],input[type="tel"], input[type="message"] {
     width: 90%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 70px;
-
   }
-.container {
+/*  }*/
+.container{
     margin: 0 auto;
+    background-color: rgb(6, 83, 94); /* Override the previous background color */
 }
   textarea {
     width: 90%;

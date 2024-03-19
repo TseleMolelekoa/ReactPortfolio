@@ -20,6 +20,7 @@ const firebaseConfig = {
 // Initialize Firebase app
 const firebaseApp = initializeApp(firebaseConfig);
 
+
 const ContactPage = () => {
   // Define state for email, phone number, and message
   const [name, setName] = useState('');
@@ -47,7 +48,6 @@ const ContactPage = () => {
         break;
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Check if reCAPTCHA is verified
@@ -103,6 +103,7 @@ const ContactPage = () => {
     }
   };
 
+
   const onChange = (value) => {
     // Update the reCAPTCHA value
     setRecaptchaValue(value);
@@ -135,7 +136,7 @@ const ContactPage = () => {
           <Form.Group as={Row} controlId="formMessage" className="mb-3">
             <Form.Label column sm={2}>Message:</Form.Label>
             <Col sm={10}>
-              <Form.Control as="textarea" name="message" value={message} onChange={handleInputChange} placeholder="Your message" />
+              <Form.Control as="textarea" name="message" type="message" value={message} onChange={handleInputChange} placeholder="Your message" />
             </Col>
           </Form.Group>
           <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={onChange} />
